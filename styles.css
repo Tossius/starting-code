@@ -89,130 +89,208 @@ p {
 .dark-theme .form-textarea {
   /* TODO: Add dark theme form control styles */
   /* HINT: Use background-color, color, and border-color */
+  background-color: #1c1b1b;
+  color: #ffffff;
+  border-color: #444;
 }
 
 .dark-theme .table th {
   /* TODO: Add dark theme table header styles */
   /* HINT: Use background-color */
+  background-color: #067ef6;
 }
 
 .dark-theme .code-editor {
   /* TODO: Add dark theme code editor styles */
   /* HINT: Use background-color */
+  background-color: #067ef6;
 }
 
 /* Card Styles */
 .card {
   /* TODO: Add card styles */
   /* HINT: Use background-color, border-radius, box-shadow, transition */
+  box-shadow: 0 2px 4px rgba(5, 21, 239, 0.1);
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  height: 80%;
+
+
 }
 
 .card:hover {
   /* TODO: Add hover styles for card */
   /* HINT: Use transform and box-shadow */
+
+  transform: scale(1.1,1.02);
+  box-shadow: 0 8px 16px rgba(5, 21, 239, 0.2);
+  
 }
 
 .card-img {
   /* TODO: Add card image styles */
   /* HINT: Set width, height, and object-fit */
+  border-radius: 15px;
+  height: 80%;
+  width: 80%;
+  object-fit: cover;
 }
 
 .card-content {
   /* TODO: Add card content styles */
   /* HINT: Add padding */
+  padding: 10px;
 }
 
 .card-title {
   /* TODO: Add card title styles */
   /* HINT: Set font-size, margin, and color */
+  color:rgb(149, 42, 165);
+  font-size: 110%;
 }
 
 .card-text {
   /* TODO: Add card text styles */
   /* HINT: Set color and margin */
+  color: rgb(0, 0, 0);
+  margin-top: 10px;
 }
 
 /* Button Styles */
 .btn {
   /* TODO: Add button styles */
   /* HINT: Use display, padding, background-color, color, border, border-radius, cursor, transition */
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--primary);
+  color: var(--white);
+  border: white;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: var(--transition);
+
+
 }
 
 .btn:hover {
   /* TODO: Add button hover styles */
   /* HINT: Change background-color */
+  font-weight: bold;
+  background-color: rgb(149, 42, 165);
+
 }
 
 .btn-success {
   /* TODO: Add success button styles */
   /* HINT: Change background-color */
+  background-color: green;
 }
 
 .btn-warning {
   /* TODO: Add warning button styles */
   /* HINT: Change background-color */
+  background-color: orange;
 }
 
 .btn-info {
   /* TODO: Add info button styles */
   /* HINT: Change background-color */
+  background-color: purple;
 }
 
 .btn-outline {
   /* TODO: Add outline button styles */
   /* HINT: Transparent background with border and specific text color */
+  background-color: transparent;
+  border: 2px solid var(--primary); 
+  color: var(--primary);
+  
 }
 
 .btn-outline:hover {
   /* TODO: Add hover styles for outline button */
   /* HINT: Change background-color and text color */
+  background-color:rgb(178, 160, 221);
+  color: var(--white);
 }
 
 .btn-group {
   /* TODO: Add button group styles */
   /* HINT: Use display and gap */
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
 }
 
 /* Chip Styles */
 .chips-container {
   /* TODO: Add chips container styles */
-  /* HINT: Use display, flex-wrap, gap, and margin */
+  /* HINT: Use display, flex-wrap, gap, and margin */ 
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+  margin-top: 20px;
 }
 
 .chip {
   /* TODO: Add chip styles */
   /* HINT: Use display, align-items, padding, background-color, border-radius, font-size, color, and cursor */
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: var(--light-gray);
+  border-radius: 21px;
+  font-size: 100%;
+  color: var(--dark);
+  cursor: pointer;
 }
 
 .chip.active {
   /* TODO: Add active chip styles */
   /* HINT: Change background-color and color */
+  background-color: var(--primary);
+  color: var(--white); 
+  outline: black;
 }
 
 .chip i {
   /* TODO: Add icon styles within chips */
   /* HINT: Use margin-right */
+  margin-right: 10px;
 }
 
 .chip .close {
   /* TODO: Add close button styles within chips */
-  /* HINT: Use margin-left, cursor, and font-weight */
+  /* HINT: Use margin-left, cursor, and font-weight */  
+  margin-left: 10px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 /* Slider Styles */
 .slider-container {
   /* TODO: Add slider container styles */
   /* HINT: Use margin */
+  margin: 25px 0;
 }
 
 .slider {
   /* TODO: Add slider styles */
   /* HINT: Use appearance, width, height, border-radius, background, and outline */
+  -webkit-appearance:block;
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  background: var(--light-gray);
+  outline: white;
 }
 
 .slider::-webkit-slider-thumb {
   /* TODO: Add slider thumb styles */
-  /* HINT: Use appearance, width, height, border-radius, background, cursor, and transition */
+  /* HINT: Use appearance, width, height, border-radius, background, cursor, and transition */ 
+  -webkit-appearance: none;
+  width: 20px;
 }
 
 .slider::-webkit-slider-thumb:hover {
