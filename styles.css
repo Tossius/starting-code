@@ -289,309 +289,496 @@ p {
 .slider::-webkit-slider-thumb {
   /* TODO: Add slider thumb styles */
   /* HINT: Use appearance, width, height, border-radius, background, cursor, and transition */ 
-  -webkit-appearance: none;
+  -webkit-appearance: block;
   width: 20px;
+  height: 25px;
+  border-radius: 5px; 
+  background: black;
+  cursor: pointer;
+  transition: var(--transition);
+
+
 }
 
 .slider::-webkit-slider-thumb:hover {
   /* TODO: Add hover styles for slider thumb */
-  /* HINT: Use background and transform */
+  /* HINT: Use background and transform */  
+  background: var(--primary);
+  transform: scale(1.5);
 }
 
 .slider-value {
   /* TODO: Add slider value styles */
-  /* HINT: Use text-align, font-weight, and color */
+  /* HINT: Use text-align, font-weight, and color */  
+  text-align: left;
+  font-weight: bold;
+  color: var(--dark);
 }
 
 /* Switch Styles */
 .switch-container {
   /* TODO: Add switch container styles */
-  /* HINT: Use display, align-items, and margin */
+  /* HINT: Use display, align-items, and margin */ 
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
 }
 
 .switch {
   /* TODO: Add switch styles */
   /* HINT: Use position, display, width, height, and margin-right */
+  position: relative;
+  display: inline-block;
+  width: 25px;
+  height: 26px;
 }
+
 
 .switch input {
   /* TODO: Add switch input styles */
-  /* HINT: Use opacity, width, and height */
+  /* HINT: Use opacity, width, and height */  
+  opacity: 100%;
+  width: 100%;
+  height: 70%;
 }
 
 .slider-round {
   /* TODO: Add slider round styles */
   /* HINT: Use position, cursor, top/left/right/bottom properties, background-color, transition, and border-radius */
+  position: absolute; 
+  cursor: pointer;
+  top: 100;
+  left: 0;
+  right: 0;
+  bottom: 100;
+  background-color: lightgray;
 }
 
 .slider-round:before {
   /* TODO: Add slider round before element styles */
   /* HINT: Use position, content, height, width, left, bottom, background-color, transition, and border-radius */
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  transition: var(--transition);
+  border-radius: 50%;
 }
 
 input:checked + .slider-round {
   /* TODO: Add checked slider round styles */
   /* HINT: Change background-color */
+  background-color: var(--primary);
 }
 
 input:checked + .slider-round:before {
   /* TODO: Add checked slider round before element styles */
   /* HINT: Use transform with translateX */
+  transform: translateX(15px);
 }
 
 /* List Styles */
 .list {
   /* TODO: Add list styles */
-  /* HINT: Use list-style-type, background-color, border-radius, overflow, and box-shadow */
+  /* HINT: Use list-style-type, background-color, border-radius, overflow, and box-shadow */  
+  list-style-type: none;
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  overflow:visible;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .list-item {
   /* TODO: Add list item styles */
   /* HINT: Use padding, border-bottom, display, align-items, cursor, and transition */
+  padding: 15px 40px;
+  border-bottom: 1px solid var(--light-gray);
+  display: flex;
+  align-items: center;
+  cursor: pointer; 
+  transition: var(--transition);
 }
 
 .list-item:last-child {
   /* TODO: Add styles for last list item */
-  /* HINT: Remove border-bottom */
+  /* HINT: Remove border-bottom */ 
+  border-bottom: none;
 }
 
 .list-item:hover {
   /* TODO: Add hover styles for list items */
   /* HINT: Change background-color */
+  background-color: rgb(190, 188, 188);
 }
 
 .list-item i {
   /* TODO: Add icon styles in list items */
-  /* HINT: Use margin-right and color */
+  /* HINT: Use margin-right and color */  
+  margin-right: 15px;
+  color: var(--primary);
 }
 
 .list-item .avatar {
   /* TODO: Add avatar styles in list items */
   /* HINT: Use width, height, border-radius, margin-right, and object-fit */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
 }
 
 /* Form Styles */
 .form-group {
   /* TODO: Add form group styles */
-  /* HINT: Add margin-bottom */
+  /* HINT: Add margin-bottom */  
+  margin-bottom: 30px;
 }
 
 .form-label {
   /* TODO: Add form label styles */
-  /* HINT: Use display, margin, and font-weight */
+  /* HINT: Use display, margin, and font-weight */  
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .form-input {
   /* TODO: Add form input styles */
-  /* HINT: Use width, padding, border, border-radius, font-size, transition */
+  /* HINT: Use width, padding, border, border-radius, font-size, transition */ 
+  width: 80%; 
+  padding: 8px;
+  border: 2px solid(black);
 }
 
 .form-input:focus {
   /* TODO: Add focus styles for form inputs */
-  /* HINT: Use outline, border-color, and box-shadow */
+  /* HINT: Use outline, border-color, and box-shadow */  
+  outline: violet;  
+  border-color: var(--primary); 
+  box-shadow: 0 0 5px rgba(67, 97, 238, 0.5);
 }
 
 .form-select {
   /* TODO: Add form select styles */
   /* HINT: Similar to form-input, with additional background-color */
+  width: 80%; 
+  padding: 8px;
+  border: 2px solid(black);
+  background-color: lightgrey;
 }
 
 .form-textarea {
   /* TODO: Add textarea styles */
   /* HINT: Similar to form-input, with additional min-height and resize properties */
+  width: 80%; 
+  padding: 8px;
+  border: 2px solid(black);
+  min-height: 70px;
+  resize: vertical;
 }
 
 /* Table Styles */
 .table-container {
   /* TODO: Add table container styles */
-  /* HINT: Use overflow-x and margin */
+  /* HINT: Use overflow-x and margin */ 
+  overflow-x: auto; 
+  margin-top: 20px;
 }
 
 .table {
   /* TODO: Add table styles */
   /* HINT: Use width, border-collapse, border-spacing */
+  width: 100%;  
+  border-collapse: collapse;
+  border-spacing: 10px;
 }
 
 .table th,
 .table td {
   /* TODO: Add table cell styles */
-  /* HINT: Use padding, text-align, border-bottom */
+  /* HINT: Use padding, text-align, border-bottom */  
+  padding: 9px 15px;
+  text-align: left;
+  border-bottom: 2px solid var(--light-gray);
 }
 
 .table th {
   /* TODO: Add table header styles */
-  /* HINT: Use background-color, font-weight, cursor */
+  /* HINT: Use background-color, font-weight, cursor */ 
+  background-color: var(--light-gray);  
+  font-weight: bold;
+  cursor: default;
 }
 
 .table th:hover {
   /* TODO: Add hover styles for table headers */
   /* HINT: Change background-color */
+  background-color: var(--primary);
+  color: var(--white);
 }
 
 .table tr {
   /* TODO: Add table row styles */
-  /* HINT: Use transition */
+  /* HINT: Use transition */  
+  transition: var(--transition);
 }
 
 .table tr:hover {
   /* TODO: Add hover styles for table rows */
   /* HINT: Change background-color with rgba for transparency */
+  background-color: rgba(67, 97, 238, 0.1);
 }
 
 /* Badge Styles */
 .badge {
   /* TODO: Add badge styles */
   /* HINT: Use display, padding, border-radius, font-size, font-weight, and margin-left */
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 90%;
+  font-weight: bold;
+  margin-left: 10px;
 }
 
 .badge-primary {
   /* TODO: Add primary badge styles */
-  /* HINT: Use background-color and color */
+  /* HINT: Use background-color and color */ 
+  background-color:#6c757d
 }
 
 .badge-success {
   /* TODO: Add success badge styles */
   /* HINT: Use background-color and color */
+  background-color: green;
+  color: white;
 }
 
 .badge-warning {
   /* TODO: Add warning badge styles */
   /* HINT: Use background-color and color */
+  background-color: orange; 
+  color: white;
 }
 
 /* Alert Styles */
 .alert {
   /* TODO: Add alert styles */
-  /* HINT: Use padding, border-radius, margin-bottom, display, align-items, and justify-content */
+  /* HINT: Use padding, border-radius, margin-bottom, display, align-items, and justify-content */  
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .alert i {
   /* TODO: Add icon styles in alerts */
-  /* HINT: Use margin-right and font-size */
+  /* HINT: Use margin-right and font-size */  
+  margin-right: 15px; 
+  font-size: 150%;
 }
 
 .alert-content {
   /* TODO: Add alert content styles */
   /* HINT: Use display and align-items */
+  display: flex;
+  align-items: center;
+
 }
 
 .alert-close {
   /* TODO: Add alert close button styles */
-  /* HINT: Use cursor and font-weight */
+  /* HINT: Use cursor and font-weight */  
+  cursor: pointer;
+  font-weight: bold;
+  background-color: lightgray;
+  border-radius: 80%;
 }
 
 .alert-success {
   /* TODO: Add success alert styles */
-  /* HINT: Use background-color, color, and border-left */
+  /* HINT: Use background-color, color, and border-left */  
+  background-color: #d4edda;
+  color: #155724;
+  border-left: 5px solid #28a745;
 }
 
 .alert-warning {
   /* TODO: Add warning alert styles */
   /* HINT: Use background-color, color, and border-left */
+  background-color: #fff3cd;
+  color: #854204;
+  border-left: 5px solid #ffc107;
 }
 
 .alert-info {
   /* TODO: Add info alert styles */
   /* HINT: Use background-color, color, and border-left */
+  background-color: #d1ecf1;
+  color: #0c5460;
+  border-left: 5px solid #17a2b8;
 }
 
 /* Navigation Styles */
 .nav {
   /* TODO: Add navigation styles */
   /* HINT: Use display, background-color, border-radius, overflow, and margin-bottom */
+  display: flex;
+  background-color: lightgray;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .nav-item {
   /* TODO: Add navigation item styles */
-  /* HINT: Use padding, color, text-decoration, transition */
+  /* HINT: Use padding, color, text-decoration, transition */ 
+  padding: 10px 80px;
+  color: var(--dark);
+  text-decoration:underline;
+  transition: var(--transition);
 }
 
 .nav-item:hover {
   /* TODO: Add hover styles for nav items */
-  /* HINT: Change background-color */
+  /* HINT: Change background-color */ 
+  background-color: gray;
+  color: var(--white);
 }
 
 .nav-item.active {
   /* TODO: Add styles for active nav item */
   /* HINT: Use background-color and font-weight */
+  background-color: var(--gray);
+  font-weight: bold; 
+  color: var(--white);
 }
 
 /* Progress Bar Styles */
 .progress {
   /* TODO: Add progress bar container styles */
-  /* HINT: Use height, background-color, border-radius, margin, and overflow */
+  /* HINT: Use height, background-color, border-radius, margin, and overflow */ 
+  height: 20px;
+  background-color: var(--light-gray);
+  border-radius: 10px;
+  margin: 20px 0;
+  overflow: hidden;
 }
 
 .progress-bar {
   /* TODO: Add progress bar styles */
   /* HINT: Use height, border-radius, and transition */
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.5s ease;
 }
 
 .progress-primary {
   /* TODO: Add primary progress bar styles */
-  /* HINT: Use background-color */
+  /* HINT: Use background-color */  
+  background-color: var(--primary);
 }
 
 .progress-success {
   /* TODO: Add success progress bar styles */
   /* HINT: Use background-color */
+  background-color: green;
 }
 
 /* Pagination Styles */
 .pagination {
   /* TODO: Add pagination styles */
-  /* HINT: Use display, list-style, padding, and margin */
+  /* HINT: Use display, list-style, padding, and margin */  
+  display: flex;  
+  list-style: none;
+  align-items: center;
+  padding: 10px;
+  margin: 20px 0;
 }
 
 .page-item {
   /* TODO: Add page item styles */
-  /* HINT: Use margin-right */
+  /* HINT: Use margin-right */  
+  margin-right: 20px;
 }
 
 .page-link {
   /* TODO: Add page link styles */
   /* HINT: Use display, padding, border, border-radius, color, text-decoration, transition, and cursor */
+  display: inline-block;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  color: var(--dark);
+  text-decoration: underline;
+  transition: var(--transition);
+  cursor: pointer;
 }
 
 .page-link:hover {
   /* TODO: Add hover styles for page links */
-  /* HINT: Change background-color */
+  /* HINT: Change background-color */ 
+  background-color: var(--light-gray);
 }
 
 .page-item.active .page-link {
   /* TODO: Add styles for active page link */
-  /* HINT: Use background-color, color, and border-color */
+  /* HINT: Use background-color, color, and border-color */ 
+  background-color: none;
+  color: purple;
+  border-color: purple;
 }
 
 /* Breadcrumb Styles */
 .breadcrumb {
   /* TODO: Add breadcrumb styles */
-  /* HINT: Use display, list-style, padding, and margin */
+  /* HINT: Use display, list-style, padding, and margin */  
+  display: flex;
+  list-style: none;
+  padding: 10px 0;
+  margin: 20px 0;
 }
 
 .breadcrumb-item {
   /* TODO: Add breadcrumb item styles */
   /* HINT: Use display and align-items */
+  display: flex; 
+  align-items: center;
+
 }
 
 .breadcrumb-item:not(:last-child)::after {
   /* TODO: Add separator for breadcrumb items */
   /* HINT: Use content, margin, and color */
+  content: " > ";
+  margin: 0 10px;
+  color: var(--gray);
 }
 
 .breadcrumb-link {
   /* TODO: Add breadcrumb link styles */
-  /* HINT: Use color, text-decoration, and cursor */
+  /* HINT: Use color, text-decoration, and cursor */  
+  color: var(--dark); 
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .breadcrumb-link:hover {
   /* TODO: Add hover styles for breadcrumb links */
   /* HINT: Add text-decoration */
+  text-decoration:underline;
 }
 
 .breadcrumb-item.active {
   /* TODO: Add styles for active breadcrumb item */
-  /* HINT: Use color */
+  /* HINT: Use color */ 
+  color: var(--primary);
 }
 
 /* Modal Styles */
